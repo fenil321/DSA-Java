@@ -1,0 +1,135 @@
+DSA Questions:
+
+Maximum Subarray
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int cs=0;
+        int ms=Integer.MIN_VALUE;
+
+        for(int i=0;i<nums.length;i++){
+            cs = Math.max(nums[i], cs + nums[i]);
+            ms=Math.max(cs,ms);
+        }
+        return ms;
+    }
+}
+
+Majority Element
+
+
+
+   class Solution {
+   public int majorityElement(int[] nums) {
+       int n = nums.length;
+       int count = 1;
+       int majority = nums[0]; // Assume first element as candidate
+
+
+       // Phase 1: Find potential majority candidate
+       for (int i = 1; i < n; i++) {
+           if (nums[i] == majority) {
+               count++;
+           } else {
+               count--;
+               if (count == 0) {
+                   majority = nums[i];
+                   count = 1;
+               }
+           }
+       }
+
+
+       // Phase 2: Verify the candidate
+       count = 0;
+       for (int i = 0; i < n; i++) {
+           if (nums[i] == majority) {
+               count++;
+           }
+       }
+
+
+       // Return the element if it occurs more than n/2 times
+       if (count > n / 2)
+           return majority;
+       else
+           return -1; // No majority element found
+   }
+   }
+
+
+Trapping Water
+
+class Solution {
+    public int trap(int[] height) {
+        int n=height.length;
+        int leftMax[] = new int[n];
+        leftMax[0]=height[0];
+        for(int i=1; i<n; i++)
+        {
+            leftMax[i]=Math.max(height[i],leftMax[i-1]);
+        }
+
+        int rightMax[]=new int[n];
+        rightMax[n-1]=height[n-1];
+        for(int i=n-2; i>=0; i--)
+        {
+            rightMax[i]=Math.max(height[i],rightMax[i+1]);
+        }
+
+        int trappedWater=0;
+        for(int i=0; i<n;i++){
+            int waterlevel= Math.min(leftMax[i],rightMax[i]);
+            trappedWater += waterlevel-height[i];
+        }
+        return trappedWater;
+    }
+}
+
+Best Time to buy and sell stock
+class Solution {
+    public int maxProfit(int[] prices) {
+        int buyprice=Integer.MAX_VALUE;
+        int maxProfit=0;
+
+        for(int i=0;i<prices.length;i++){
+            if(buyprice<prices[i])
+            {
+                int profit = prices[i] - buyprice;
+                maxProfit=Math.max(maxProfit,profit);
+            }else{
+                buyprice=prices[i];
+            }
+        }
+        return maxProfit;
+    }
+}
+
+contains duplicate
+
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        for(int i=0;i<nums.length-1;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i]==nums[j]){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
+or
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashSet<Integer> set = new HashSet<>();
+        for(int i=0;i<nums.length;i++){
+            if(set.contains(nums[i])){
+                return true;
+            }
+            else{
+                set.add(nums[i]);
+            }
+        }
+        return false;
+    }
+}
