@@ -179,6 +179,6 @@ public class Patterns {
        //leap(year);
        //geom(n, a, r);
        // table(n);
-       hollow(n);
+       //hollow(n);
     }
 }

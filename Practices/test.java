@@ -136,8 +136,8 @@ public class test {
         //frequencyofnum();
         //pattern(n);
         //evenodd();
-        //simplevenodd();
+        simplevenodd();
         //reverseword();
-        hollowrec(n);
+        //hollowrec(n);
     }
 }
