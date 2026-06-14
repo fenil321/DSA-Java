@@ -442,6 +442,60 @@ public class all_in_one {
         }
         System.out.println("Total word in string : "+count);
     }
+    // 1
+    // 23
+    // 456
+    // 654
+    // 32
+    // 1
+    public static void patternnn(int n){
+        int count=1;
+        for(int i=1;i<=3;i++){
+            //spaces
+            for (int j = 1; j <= 3-i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print(count+" ");
+                count++;
+            }
+            System.out.println();
+        }
+        count--;
+        for(int i=3;i>=1;i--){
+            //spaces
+            for (int j = 1; j <= 3-i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print(count+" ");
+                count--;
+            }
+            System.out.println();
+        }
+    }
+
+    public static void adjacentswapelement(){
+        int[] arr={1,2,3,4,5,6};
+        System.out.println("Original Array: ");
+        //print org array
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println(); // for newline
+        //swap second element with first
+        for (int i = 0; i < arr.length-1; i+=2) {
+            int temp=arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=temp;
+        }
+
+        System.out.println("Result Array: ");
+        //print final result
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+    }
     public static void main(String[] args) {
         int n=5,year=2020;
         int k=2;
@@ -473,5 +527,7 @@ public class all_in_one {
         //removeduplicatechar();
         //firstunique();
         //countword();
+        //patternnn(n);
+        adjacentswapelement();
     }
 }
