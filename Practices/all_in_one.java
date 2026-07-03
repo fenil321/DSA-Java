@@ -496,6 +496,17 @@ public class all_in_one {
             System.out.print(arr[i]+" ");
         }
     }
+    public static void ppp(int n){
+        for(int i=0;i<=n;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<=n-i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         int n=5,year=2020;
         int k=2;
@@ -525,9 +536,10 @@ public class all_in_one {
         //countvowel();
         //freqstr();
         //removeduplicatechar();
-        //firstunique();
+        firstunique();
         //countword();
         //patternnn(n);
-        adjacentswapelement();
+        //adjacentswapelement();
+        //ppp(n);
     }
 }
