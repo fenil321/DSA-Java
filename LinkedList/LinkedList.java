@@ -125,6 +125,81 @@ public class LinkedList{
         return val;
     }
 
+    public int itrSerach(int key){ //o(n)
+        Node temp=head;
+        int i=0;
+
+        while(temp!=null){
+            if(temp.data==key){
+                return i;
+            }
+            temp=temp.next;
+            i++;
+        }
+        //key not found case
+        return -1;
+    }
+
+    public int helper(Node head, int key){ //o(n)
+        if(head==null){
+            return -1;
+        }
+        
+        if(head.data==key){
+            return 0;
+        }
+
+        int idx=helper(head.next,key);
+        if(idx==-1){
+            return -1;
+        }
+        return idx+1;
+    }
+    public int recursiveSearch(int key){
+        return helper(head,key);
+    }
+
+    //reverse a linked list
+    public void reverse(){ //O(n)
+        Node prev=null;
+        Node curr=tail=head;
+        Node next;
+
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        head=prev;
+    }
+
+    public void removeNthFromEnd(int n){
+        //calculate size
+        int sz=0;
+        Node temp=head;
+        while(temp!=null){
+            temp=temp.next;
+            sz++;
+        }
+
+        if(n==sz){
+            head=head.next; //remove first
+            return;
+        }
+
+        //sz-n
+        int i=1;
+        int iToFind=sz-n;
+        Node prev=head;
+        while(i<iToFind){
+            prev=prev.next;
+            i++;
+        }
+        prev.next=prev.next.next;
+        return;
+    }
+
     public static void main(String args[]){
        LinkedList ll=new LinkedList();
        ll.print();
@@ -135,16 +210,29 @@ public class LinkedList{
        ll.addLast(3);
        ll.print();
        ll.addLast(4);
+       ll.addLast(5);
+       ll.addLast(6);
 
-       ll.add(2,9);
+       System.out.println("remove from the end: ");
+       ll.removeNthFromEnd(2);
        ll.print();
 
-       ll.removeFirst();
-       ll.print();
+       //ll.add(2,9);
+       //ll.print();
 
-       ll.removeLast();
-       ll.print();
+       //ll.removeFirst();
+       //ll.print();
 
-       System.out.println(ll.size);
+       //ll.removeLast();
+       //ll.print();
+
+       //System.out.println(ll.size);
+
+       System.out.println(ll.itrSerach(2));
+       System.out.println(ll.recursiveSearch(3));
+
+       System.out.println("Reverse of linked list: ");
+       ll.reverse();
+       ll.print();
     }
 }
