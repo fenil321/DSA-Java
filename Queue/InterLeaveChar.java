@@ -9,6 +9,11 @@ public class InterLeaveChar {
          for(int i=0;i<size/2;i++){
              firstHalf.add(q.remove());
          }
+
+         while(!firstHalf.isEmpty()){
+            q.add(firstHalf.remove());
+            q.add(q.remove());
+         }
     }
     public static void main(String[] args) {
         Queue<Integer> q = new LinkedList<>();
@@ -22,6 +27,13 @@ public class InterLeaveChar {
         q.add(8);
         q.add(9);
         q.add(10);
+
+        interLeave(q);
+
+        //print the interleaved queue
+        while(!q.isEmpty()){
+            System.out.print(q.remove()+" ");
+        }
     }
 }
 
