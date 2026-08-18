@@ -1,4 +1,3 @@
-package Queue;
 
 public class SimpleQueue {
     static class Queue{

@@ -1,4 +1,3 @@
-package Queue;
 
 public class CircularQueue {
     static class Queue{
