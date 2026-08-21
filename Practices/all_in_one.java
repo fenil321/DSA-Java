@@ -507,6 +507,21 @@ public class all_in_one {
             System.out.println();
         }
     }
+
+    public static boolean palindromeNumber(int x){
+        if(x<0){
+            return false;
+        }
+        int org=x;
+        int reversed=0;
+
+        while(x>0){
+            int lastDigit=x%10;
+            reversed=(reversed*10)+lastDigit;
+            x=x/10;
+        }
+        return org==reversed;
+    }
     public static void main(String[] args) {
         int n=5,year=2020;
         int k=2;
@@ -536,10 +551,11 @@ public class all_in_one {
         //countvowel();
         //freqstr();
         //removeduplicatechar();
-        firstunique();
+        //firstunique();
         //countword();
         //patternnn(n);
         //adjacentswapelement();
         //ppp(n);
+        System.out.println(palindromeNumber(121));
     }
 }
