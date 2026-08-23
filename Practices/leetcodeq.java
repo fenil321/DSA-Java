@@ -30,8 +30,40 @@ public class leetcodeq {
             n++;
         }
     }
+    public static boolean sumGame(String num) {
+        int n = num.length();
+        int sumL=0, sumR=0;
+        int lQ=0, rQ=0;
+
+        //Left side
+        for(int i=0;i<n/2;i++){
+            if(num.charAt(i)=='?'){
+                lQ++;
+            }else{
+                sumL+=num.charAt(i)-'0';
+            }
+        }
+
+        //right side
+        for(int i=n/2; i<n;i++){
+            if(num.charAt(i)=='?'){
+                rQ++;
+            }else{
+                sumR+=num.charAt(i)-'0';
+            }
+        }
+
+        // if total num of '?' is odd, alice always gets last move and win
+        if((lQ+rQ)%2!=0){
+            return true;
+        }
+
+        return (sumL-sumR)*2 != (rQ-lQ)*9;
+    }
+
     public static void main(String[] args) {
         System.out.println(checkDivisibility(99)); // Example usage
         System.out.println(smallestNumber(123, 5)); // Example usage
+        System.out.println(sumGame("5?456???"));
     }
 }
