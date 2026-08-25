@@ -1,3 +1,4 @@
+import java.util.*;
 public class leetcodeq {
     public static boolean checkDivisibility(int n) {
         int sum=0;
@@ -61,9 +62,24 @@ public class leetcodeq {
         return (sumL-sumR)*2 != (rQ-lQ)*9;
     }
 
+    public static int missingMultiple(int[] nums, int k) {
+       Set<Integer> set = new HashSet<>();
+       for(int num:nums){
+        set.add(num);
+       }
+
+       int multiple=k;
+       while(set.contains(multiple)){
+        multiple+=k;
+       }
+
+       return multiple;
+    }
+
     public static void main(String[] args) {
         System.out.println(checkDivisibility(99)); // Example usage
         System.out.println(smallestNumber(123, 5)); // Example usage
         System.out.println(sumGame("5?456???"));
+        System.out.println(missingMultiple(new int[]{8,2,3,4,6}, 2));
     }
 }
