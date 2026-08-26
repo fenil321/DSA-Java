@@ -76,10 +76,29 @@ public class leetcodeq {
        return multiple;
     }
 
+    public static String longestCommonPrefix(String[] strs) {
+        if(strs==null || strs.length==0){
+            return "";
+        }
+        //use first string as ref
+        for(int i=0; i<strs[0].length();i++){
+            char c =strs[0].charAt(i);
+
+            //compare
+            for(int j=1;j<strs.length;j++){
+                if(i==strs[j].length() || strs[j].charAt(i)!=c){
+                    return strs[0].substring(0,i);
+                }
+            }
+        }
+        return strs[0];
+    }
+
     public static void main(String[] args) {
         System.out.println(checkDivisibility(99)); // Example usage
         System.out.println(smallestNumber(123, 5)); // Example usage
         System.out.println(sumGame("5?456???"));
         System.out.println(missingMultiple(new int[]{8,2,3,4,6}, 2));
+        System.err.println(longestCommonPrefix(new String[]{"flower","flow","flight"}));
     }
 }
