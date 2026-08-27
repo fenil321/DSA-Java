@@ -94,11 +94,25 @@ public class leetcodeq {
         return strs[0];
     }
 
+    public static int removeDuplicates(int[] nums) {
+        if(nums.length==0) return 0;
+
+        int k=0;
+        for(int i=1;i<nums.length;i++){
+            if(nums[i]!=nums[k]){
+                k++;
+                nums[k]=nums[i];
+            }
+        }
+        return k+1;
+    }
+
     public static void main(String[] args) {
         System.out.println(checkDivisibility(99)); // Example usage
         System.out.println(smallestNumber(123, 5)); // Example usage
         System.out.println(sumGame("5?456???"));
         System.out.println(missingMultiple(new int[]{8,2,3,4,6}, 2));
+        System.out.println(removeDuplicates(new int[]{1,1,2,3,3}));
         System.err.println(longestCommonPrefix(new String[]{"flower","flow","flight"}));
     }
 }
