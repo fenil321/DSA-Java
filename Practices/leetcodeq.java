@@ -107,12 +107,38 @@ public class leetcodeq {
         return k+1;
     }
 
+    public static int romanToInt(String s) {
+        Map<Character, Integer> romanMap = new HashMap<>();
+        romanMap.put('I', 1);
+        romanMap.put('V', 5);
+        romanMap.put('X', 10);
+        romanMap.put('L', 50);
+        romanMap.put('C', 100);
+        romanMap.put('D', 500);
+        romanMap.put('M', 1000);
+
+        int total = 0;
+        int n = s.length();
+
+        for (int i = 0; i < n; i++) {
+            int currentValue = romanMap.get(s.charAt(i));
+
+            if (i + 1 < n && currentValue < romanMap.get(s.charAt(i + 1))) {
+                total -= currentValue;
+            } else {
+                total += currentValue;
+            }
+        }
+        return total;
+    }
+
     public static void main(String[] args) {
         System.out.println(checkDivisibility(99)); // Example usage
         System.out.println(smallestNumber(123, 5)); // Example usage
         System.out.println(sumGame("5?456???"));
         System.out.println(missingMultiple(new int[]{8,2,3,4,6}, 2));
         System.out.println(removeDuplicates(new int[]{1,1,2,3,3}));
+        System.out.println(romanToInt("MCMXC"));
         System.err.println(longestCommonPrefix(new String[]{"flower","flow","flight"}));
     }
 }
