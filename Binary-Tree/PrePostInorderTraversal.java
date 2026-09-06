@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.LinkedList;
 
 public class PrePostInorderTraversal {
     static class Node{
@@ -52,6 +53,37 @@ public class PrePostInorderTraversal {
             System.out.print(root.data+" "); //root
             inorder(root.Right); //right subtree
         }
+
+        //level order traversal
+        public static void levelOrder(Node root){
+            if(root==null){
+                return;
+            }
+
+            Queue<Node> q=new LinkedList<>();
+            q.add(root);
+            q.add(null);
+
+            while(!q.isEmpty()){
+                Node currNode=q.remove();
+                if(currNode==null){
+                    System.out.println();
+                    if(q.isEmpty()){
+                        break;
+                    }else{
+                        q.add(null);
+                    }
+                }else{
+                    System.out.print(currNode.data+" ");
+                    if(currNode.Left!=null){
+                        q.add(currNode.Left);
+                    }
+                    if(currNode.Right!=null){
+                        q.add(currNode.Right);
+                    }
+                }
+            }
+        }
     }
 
     public static void main(String args[]){
@@ -64,5 +96,7 @@ public class PrePostInorderTraversal {
         tree.postorder(root);
         System.out.println();
         tree.inorder(root);
+        System.out.println();
+        tree.levelOrder(root);
     }
 }
