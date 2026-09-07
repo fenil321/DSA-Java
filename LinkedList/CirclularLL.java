@@ -52,5 +52,6 @@ public class CirclularLL{
         last = addLast(last, 0);
         last = addFirst(last, 4);
         traverse(last);
+        
     }
 }
