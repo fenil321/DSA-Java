@@ -18,7 +18,9 @@ public class all_in_one {
         System.out.println("Geometry series : ");
         for(int i=1,k=a; i<=n; i++,k*=r){
             System.out.print(k+" ");
+            sum+=k;
         }
+        System.out.println("Sum is: "+sum);
     }
     public static void squarenum(int n){
         int sum=0;
@@ -43,7 +45,7 @@ public class all_in_one {
     
     public static void largestnuminarr(){
         int[] arr={2,3,4,12,5,8};
-        int largest=arr[0];
+        int largest=Integer.MIN_VALUE;
         for(int i=0;i<arr.length;i++){
             if(arr[i]>largest){
                 largest=arr[i];
@@ -53,8 +55,8 @@ public class all_in_one {
     }
     public static void secondlr(){
         int[] arr={2,3,4,12,5,8};
-        int lr=arr[0];
-        int slr=arr[0];
+        int lr=Integer.MIN_VALUE;
+        int slr=Integer.MIN_VALUE;
          //find largest
         for(int i=0;i<arr.length;i++){
             if(arr[i]>lr){
@@ -531,8 +533,8 @@ public class all_in_one {
         //leap(year);
         //largestnuminarr();
         //secondlr();
-        //p1(n);
-        //p2(n);
+        p1(n);
+        p2(n);
         //hollow(n);
         //prime(n);
         //freq();
@@ -556,6 +558,6 @@ public class all_in_one {
         //patternnn(n);
         //adjacentswapelement();
         //ppp(n);
-        System.out.println(palindromeNumber(121));
+        //System.out.println(palindromeNumber(121));
     }
 }
