@@ -533,8 +533,8 @@ public class all_in_one {
         //leap(year);
         //largestnuminarr();
         //secondlr();
-        p1(n);
-        p2(n);
+        // p1(n);
+        // p2(n);
         //hollow(n);
         //prime(n);
         //freq();
