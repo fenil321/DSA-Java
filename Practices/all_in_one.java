@@ -343,6 +343,7 @@ public class all_in_one {
         }
     }
     
+    // reverse string
     public static void reversestr(){
         String str="Fenil";
         String rev="";
@@ -353,6 +354,7 @@ public class all_in_one {
         System.out.println("Reverse String :"+rev);
     }
     
+    // check palindrome string
     public static void palindstr(){
         String str="madam";
         String rev="";
@@ -367,6 +369,7 @@ public class all_in_one {
         }
     }
     
+    // count vowels and consonants in string
     public static void countvowel(){
         String str="education";
         int vowels=0,consonants=0;
@@ -382,6 +385,7 @@ public class all_in_one {
         System.out.println("Consonants : "+consonants);
     }
     
+    // count frequency of word in string
     public static void freqstr(){
         String str="rameshvaram";
         boolean[] visited=new boolean[str.length()];
@@ -399,7 +403,8 @@ public class all_in_one {
             System.out.println(str.charAt(i)+" -> "+count);
         }
     }
-    
+
+    // remove duplicate char from string
     public static void removeduplicatechar(){
         String str="programming";
         String result="";
