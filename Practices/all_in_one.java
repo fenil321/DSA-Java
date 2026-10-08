@@ -263,7 +263,7 @@ public class all_in_one {
             System.out.println("array not sorted");
         }
     }
-    
+    //remove duplicate from array
     public static void arrduplicate(){
         int[] arr={1,1,2,2,3,4,4,5,6,7};
         int j=0;
@@ -279,7 +279,7 @@ public class all_in_one {
             System.out.print(arr[i]+" ");
         }
     }
-    
+    //missing num in array
     public static void missingnumarr(){
         int[] arr={1,2,4,5};
         int n=5;
@@ -290,7 +290,7 @@ public class all_in_one {
         int total=n*(n+1)/2;
         System.out.println("Missing num :"+(total-sum));
     }
-    
+    //pairwith sum
     public static void pairwithsum(){
         int[] arr = {8, 4, 5, 2, 3, 1};
         int target=9;
@@ -303,7 +303,7 @@ public class all_in_one {
             }
         }
     }
-    
+    //move zeros to end
     public static void movezerotoend(){
         int[] arr={0,1,2,0,3,0,5};
         int idx=0;
@@ -321,7 +321,7 @@ public class all_in_one {
             System.out.print(arr[i]+" ");
         }
     }
-    
+    // rotate array by k
     public static void rotatearr(int K){
         int[] arr={1, 2, 3, 4, 5, 6, 7};
         int n=arr.length;
