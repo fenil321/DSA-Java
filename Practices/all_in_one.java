@@ -158,6 +158,8 @@ public class all_in_one {
         }
         
     }
+
+    //count frquency of number in array
     public static void freq(){
         int[] arr = {1,1, 2, 2, 3, 4, 4, 4};
         boolean[] visited = new boolean[arr.length];
@@ -222,6 +224,8 @@ public class all_in_one {
              if(i<result.length-1) System.out.print(",");
         }
     }
+
+    //reverse word in string
     public static void reverseword(){
         String str="hello fenil, java!";
         String[] words = str.split(" ");
@@ -232,6 +236,7 @@ public class all_in_one {
         }
     }
     
+    //reverse array
     public static void reversearr(){
         int[] arr={1,2,3,4,5};
         int start=0, end=arr.length-1;
@@ -248,6 +253,7 @@ public class all_in_one {
             System.out.print(arr[i]+" ");
         }
     }
+    // array is sorted or not
     public static void arrsortedornot(){
         int[] arr={1,2,3};
         boolean sorted=true;
