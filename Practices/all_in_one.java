@@ -1,4 +1,6 @@
 public class all_in_one {
+
+    //fibonacci series and sum
     public static void fibo(int n){
         int a=0,b=1,c,sum=0;
         //System.out.println(a+" "+b);
@@ -12,6 +14,7 @@ public class all_in_one {
         System.out.println("Sum is: "+sum);
     }
     
+    //geometric series and sum
     public static void geo(int n){
         int a=2,r=2;
         int sum=0;
@@ -22,6 +25,8 @@ public class all_in_one {
         }
         System.out.println("Sum is: "+sum);
     }
+
+    //square of number and sum
     public static void squarenum(int n){
         int sum=0;
         for(int i=1; i<=n;i++){
@@ -32,6 +37,7 @@ public class all_in_one {
         System.out.println("Sum : "+sum);
     }
     
+    //leap year from 2000 to given year
     public static void leap(int year){
         boolean first=true;
         for(int i=2000;i<=year;i++){
@@ -43,6 +49,7 @@ public class all_in_one {
         }
     }
     
+    //largest number in array
     public static void largestnuminarr(){
         int[] arr={2,3,4,12,5,8};
         int largest=Integer.MIN_VALUE;
@@ -53,6 +60,8 @@ public class all_in_one {
         }
         System.out.println("Largest Num: "+largest);
     }
+
+    //second largest number in array
     public static void secondlr(){
         int[] arr={2,3,4,12,5,8};
         int lr=Integer.MIN_VALUE;
@@ -135,6 +144,7 @@ public class all_in_one {
         }
     }
     
+    //prime number add in array
     public static void prime(int n){
         int[] primes =new int[n];
         int count=0;
