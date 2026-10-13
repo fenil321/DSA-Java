@@ -68,6 +68,7 @@ public class test {
         System.out.println(Arrays.toString(arr));
     }
 
+    //simple even odd without using comparator
     public static void simplevenodd(){
         int[] arr = {8, 4, 5, 2, 3, 1};
 
@@ -109,6 +110,7 @@ public class test {
         System.out.println("]");
     }
 
+    //reversse word in string
     public static void reverseword() {
         String str = "programmer java Hello gandu";
         String[] words = str.split(" ");
@@ -119,6 +121,7 @@ public class test {
         }
     }
 
+    //hollow rectangle pattern
     public static void hollowrec(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
