@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class test {
+    //add prime number in array
     public static void PrimeArray(int n){
         int[] primes = new int[n];
         int count = 0;
@@ -25,6 +26,7 @@ public class test {
         }
     }
 
+    //frequency of number
     public static void frequencyofnum() {
         int[] arr = {1,1, 2, 2, 3, 4, 4, 4};
         boolean[] visited = new boolean[arr.length];
@@ -43,7 +45,7 @@ public class test {
             System.out.println(arr[i] + ":" + count);
         }
     }
-
+    // odd even pattern
     public static void pattern(int n) {
         for (int i = 1; i <= n; i++) {
             if (i % 2 != 0) {
