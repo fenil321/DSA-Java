@@ -57,6 +57,7 @@ public class test {
         }
     }
 
+    //evenodd added in array
     public static void evenodd() {
 
         Integer[] arr = {8, 4, 5, 2, 3, 1};

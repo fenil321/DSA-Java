@@ -1,4 +1,5 @@
 public class test2 {
+    //fibonacci with sum
     public static void fibo(int n) {
         int a=0,b=1,c,sum=0;
         System.out.println("Fibonacci Series : ");
