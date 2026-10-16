@@ -132,7 +132,7 @@ public class test4{
 
     //Check Anagram Strings
    /*  What is an Anagram?
-    👉 Two strings are called anagrams if:
+        Two strings are called anagrams if:
         They have the same length
         They contain the same characters
         The order of characters can be different
@@ -175,13 +175,13 @@ public class test4{
 
     }
     public static void main(String[] args) {
-        revstr();
-        palindrome();
-        countvowels();
-        Frequencyofchar();
-        removedupchar();
-        firstunique();
-        countwordinstr();
-        anagram();
+       // revstr();
+       // palindrome();
+        //countvowels();
+        //Frequencyofchar();
+        // removedupchar();
+        // firstunique();
+        // countwordinstr();
+        // anagram();
     }
 }
