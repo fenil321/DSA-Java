@@ -1,4 +1,5 @@
 public class test3 {
+    //largest num in array
     public static void lrarr(){
         int[] arr={1,23,4,5,67,0};
         int lr=arr[0];
@@ -10,6 +11,7 @@ public class test3 {
         System.out.println("largest element:"+lr);
     }
 
+    //second largest in array
     public static void seclrarr(){
         int[] arr={1,23,4,5,67,0};
         int lr=arr[0];
